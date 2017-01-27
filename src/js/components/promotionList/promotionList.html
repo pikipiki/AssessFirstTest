@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div ng-repeat="promotion in $ctrl.promotionObjects">
+
+    <div class="row">  
+
+      <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-xs-offset-2 col-xs-8">  
+
+          <img class="img-responsive dropshadow margin-bottom-1em" ng-src="{{promotion.promo_image_url}}"/>
+     
+          <p>
+            <a class="link_font" ui-sref="promotionDetail({promoId: $index + 1})">{{promotion.promotion_name}}</a>
+          </p>
+     
+          <p class="txt_font">{{promotion.summary}}</p>
+
+          <p class="txt_font">Next Drawing date: 
+            {{promotion.drawings[0].drawing_date | date:'fullDate'}} 
+          </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

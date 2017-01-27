@@ -1,0 +1,86 @@
+<div class="container">
+
+  <div class="row">  
+
+    <div class="col-xs-offset-2 col-xs-8">  
+
+        <img class="img-responsive dropshadow margin-bottom-1em img-center" ng-src="{{$ctrl.promotionObject.promo_image_url}}"/>
+   
+        <p>{{$ctrl.promotionObject.promotion_name}}</p>   
+        <p>{{$ctrl.promotionObject.summary}}</p>
+
+        <div class="text-center">
+
+          <p class="title_font">Drawing Schedule</p>
+
+          <div class="row" ng-hide="$ctrl.mediaUnder480 === true">
+            <div class="col-xs-2"> 
+              <p>PRIZE</p>
+              <p ng-repeat="promotion in $ctrl.promotionObject.drawings" class="bg-grey text-center">
+                ${{promotion.prize | onlyNumbers }}
+              </p>    
+            </div>
+
+            <div class="col-xs-5"> 
+              <p>ENTRY DEADLINE</p>
+              <p ng-repeat="promotion in $ctrl.promotionObject.drawings" class="bg-grey text-center">
+                {{promotion.entry_deadline | date:'fullDate' }}
+              </p>
+            </div>
+
+            <div class="col-xs-5"> 
+              <p>DRAWING DATE</p>
+              <p ng-repeat="promotion in $ctrl.promotionObject.drawings" class="bg-grey text-center">
+                {{promotion.drawing_date | date:'fullDate' }}
+              </p>
+            </div>
+          </div>
+
+        <promotion-detail-mobile
+          checkmedia="{{$ctrl.mediaUnder480}}"
+          property="drawings">
+        </promotion-detail-mobile>
+
+        </div>
+
+        <p>{{$ctrl.promotionObject.entry_info}}</p>
+
+        <div class="text-center">
+
+          <p class="title_font">
+            Your total tickets entered: 
+            {{ $ctrl.promotionObject.entries.length}}
+          </p>
+          <p>
+            All entries are locked in at the time htey are submitted and cannot be deleted.
+          </p>
+
+          <div class="row" ng-hide="$ctrl.mediaUnder480 === true"> 
+            <div class="col-xs-4"> 
+              <p>ENTRY NUMBER</p>
+              <p ng-repeat="entry in $ctrl.promotionObject.entries" class="bg-grey">
+                {{entry.entry_number}}
+              </p>
+            </div>
+
+            <div class="col-xs-8"> 
+              <p>DATE</p>
+              <p ng-repeat="entry in $ctrl.promotionObject.entries" class="bg-grey">
+                {{entry.date | date:'fullDate'}}
+              </p>
+            </div>
+          </div>
+
+          <promotion-detail-mobile
+            checkmedia="{{$ctrl.mediaUnder480}}"
+            property="entries">
+          </promotion-detail-mobile>
+
+        </div>
+
+    </div>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,37 @@
+body{
+  font-family: Arial;
+}
+
+.link_font{
+  font-size: 24px;
+  font-weight: bold;
+  color: #036dbe;
+}
+
+.txt_font{
+  font-size: 14px;
+  font-weight: bold;
+  color: #444444;
+}
+
+.dropshadow{
+  box-shadow: 0 0 10px black;
+}
+
+.margin-bottom-1em{
+  margin-bottom: 1em;
+}
+
+.img-center {
+  margin:0 auto;
+}
+
+.bg-grey {
+  background-color: #cccccc;
+}
+
+.title_font{
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}

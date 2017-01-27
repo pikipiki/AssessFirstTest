@@ -1,0 +1,14 @@
+<div class="row" ng-if="$ctrl.checkmedia === 'true'">
+  <div ng-repeat="promotion in $ctrl.promotionObject[$ctrl.property]">
+    <div ng-repeat="(key,value) in promotion">
+      <div class="row bg-grey">
+        <div class="col-xs-6">
+          <p class="text-left">{{ key | underscoreless | uppercase }}</p>         
+        </div>
+        <div class="col-xs-6">
+          <p class="text-left">{{ value | date:'fullDate'}}</p>         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
