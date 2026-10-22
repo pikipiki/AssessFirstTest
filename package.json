@@ -10,10 +10,10 @@
   "dependencies": {
     "angular": "^1.6.1",
     "angular-media-queries": "^0.6.1",
-    "angular-ui-router": "^1.0.0-beta.3",
-    "body-parser": "^1.16.0",
-    "bootstrap": "^3.3.7",
-    "express": "^4.14.0",
-    "jquery": "^3.1.1"
+    "angular-ui-router": "^1.1.2",
+    "body-parser": "^1.20.9",
+    "bootstrap": "^3.4.1",
+    "express": "^4.22.3",
+    "jquery": "^3.7.1"
   }
 }
